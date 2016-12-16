@@ -1,0 +1,1090 @@
+<?xml version="1.0" encoding="UTF-8"?><Msg xmlns:bfa="urn:com.sap.b1i.bizprocessor:bizatoms" xmlns="urn:com.sap.b1i.vplatform:entity" MessageId="12042616380482831136C0A8011098E8" BeginTimeStamp="20120426163804" recording="true" logmsg="0000" SubMessageId="2" status="success" msglogexcl="false" MessageLog="true"><Header><IPO Id="INB_IQ_INTQ_ASYN_QS" tid="12042609243782831116C0A80110D8FB"></IPO><IPO Id="PRC_QS" tid="12042609243782831215C0A80110E225"></IPO><msglog step="Default message log" always="false" b1ifactive="true"></msglog><Resumption><starter ipo="/vP.0010000000.in_IQ/com.sap.b1i.vplatform.runtime/INB_IQ_INTQ_ASYN_QS/INB_IQ_INTQ_ASYN_QS.ipo/proc"></starter><restart id="processing" q="Q.PRC_QS.0010000000" s="S.SA.IQ2B1" u="12042616380482831136C0A8011098E8.2"></restart></Resumption><ProcStream>S.SA.IQ2B1</ProcStream><Sender Id="0010000000" ObjId="SA.IQ2B1"></Sender><Successor Id="" Mode=""></Successor><Identification Ident="Queue/Stream" IdPar="n.a."></Identification><nsList></nsList><ReceiverList><Receiver Id="0010000000" filter=""></Receiver></ReceiverList><Retrieval type="Handover"></Retrieval><Outbound type="Void" channel="VOID"></Outbound><vBIU Id="SA.IQ2B1" ver="1.0.0" SId="SA.B1Scenario" filter="" phase=""></vBIU><Variables><var id="userid" value="no_authentication"></var><var id="username" value="no_authentication"></var></Variables><Properties></Properties><VarProperties></VarProperties></Header><Body><Payload Role="T" Type="Queue" add="SA.IQ2B1"></Payload><Payload Role="S"><Msg MessageId="12042616375982830754C0A801109C1A" BeginTimeStamp="20120426163759" recording="true" logmsg="0000" SubMessageId="1" status="success" msglogexcl="false" MessageLog="true" b1msg="" b1status="success">
+        <Header>
+          <IPO Id="INB_B1_EVNT_ASYN_EVT" tid="12042609243782830743C0A80110B410"></IPO>
+          <Resumption>
+            <starter ipo="/vP.0010000100.in_BEAE/com.sap.b1i.vplatform.runtime/INB_B1_EVNT_ASYN_EVT/INB_B1_EVNT_ASYN_EVT.ipo/proc"></starter>
+            <restart id="processing" q="Q.PRC_B1.0010000100" s="S.SA.B12VD" u="12042616375982830754C0A801109C1A.1"></restart>
+          </Resumption>
+          <IPO Id="PRC_B1" tid="12042609243782830826C0A8011091B1"></IPO>
+          <msglog step="Default message log" always="false" b1ifactive="true"></msglog>
+          <ProcStream>S.</ProcStream>
+          <Sender Id="0010000100" ObjId="17"></Sender>
+          <Successor Id="" Mode=""></Successor>
+          <Identification Ident="B1 Event" IdPar="n.a."></Identification>
+          <nsList></nsList>
+          <ReceiverList>
+            <Receiver Id="0010000100" filter=""></Receiver>
+          </ReceiverList>
+          <Retrieval adapter="DI API" type="Object" ruledoc=""></Retrieval>
+          <Outbound type="SAP Business One" channel="OUT_B1" method="Synchronous Insert" objectid="13" keys="DocEntry"></Outbound>
+          <vBIU Id="SA.B12VD" ver="1.0.0" SId="SA.B1Scenario" filter="" phase="S"></vBIU>
+          <Variables>
+            <var id="userid" value="no_authentication"></var>
+            <var id="username" value="no_authentication"></var>
+          </Variables>
+          <Properties></Properties>
+          <VarProperties></VarProperties>
+        </Header>
+        <Body>
+          <Payload Role="T" Type="B1Event" add="">
+            <Event xmlns="" B1EventFilter="false">
+              <b1e:b1events xmlns:b1e="urn:com.sap.b1i.sim:b1event">
+                <b1e:b1event>
+                  <b1e:eventsource>SBODemoMX</b1e:eventsource>
+                  <b1e:objecttype>17</b1e:objecttype>
+                  <b1e:transactiontype>A</b1e:transactiontype>
+                  <b1e:usercode>manager</b1e:usercode>
+                  <b1e:userid>manager</b1e:userid>
+                  <b1e:keys count="1">
+                    <b1e:key>
+                      <b1e:name>DocEntry</b1e:name>
+                      <b1e:value>253</b1e:value>
+                    </b1e:key>
+                  </b1e:keys>
+                  <b1e:sourcesite>B1IFSERVER</b1e:sourcesite>
+                </b1e:b1event>
+              </b1e:b1events>
+              <b1ie:B1IEvent xmlns:b1ie="urn:com.sap.b1i.sim:b1ievent" SysId="0010000100" SysTypeId="B1.8.8" Task="I" LocalObjectType="17">
+                <b1ie:PrimaryKeyList>
+                  <b1ie:PrimaryKey Key="DocEntry" Value="253"></b1ie:PrimaryKey>
+                </b1ie:PrimaryKeyList>
+              </b1ie:B1IEvent>
+            </Event>
+          </Payload>
+          <Payload Role="S" Result="0000" Msg="">
+            <BOM xmlns="">
+              <BO>
+                <AdmInfo>
+                  <Object>17</Object>
+                  <Version>2</Version>
+                </AdmInfo>
+                <Documents>
+                  <row>
+                    <DocEntry>253</DocEntry>
+                    <DocNum>253</DocNum>
+                    <DocType>dDocument_Items</DocType>
+                    <HandWritten>tNO</HandWritten>
+                    <Printed>psNo</Printed>
+                    <DocDate>20120426</DocDate>
+                    <DocDueDate>20120426</DocDueDate>
+                    <CardCode>C20000</CardCode>
+                    <CardName>Norm Thompson</CardName>
+                    <Address>300 Billings Drive   Suite 500
+
+Mexico D.F.,19083, DF
+MX</Address>
+                    <NumAtCard nil="true"></NumAtCard>
+                    <DocCurrency>MXP</DocCurrency>
+                    <DocRate>1.000000</DocRate>
+                    <DocTotal>432526.470000</DocTotal>
+                    <Reference1>253</Reference1>
+                    <Reference2 nil="true"></Reference2>
+                    <Comments></Comments>
+                    <JournalMemo>Sales Orders - C20000</JournalMemo>
+                    <PaymentGroupCode>1</PaymentGroupCode>
+                    <DocTime>1637</DocTime>
+                    <SalesPersonCode>1</SalesPersonCode>
+                    <TransportationCode>1</TransportationCode>
+                    <Confirmed>tYES</Confirmed>
+                    <ImportFileNum nil="true">0</ImportFileNum>
+                    <SummeryType>dNoSummary</SummeryType>
+                    <ContactPersonCode>1</ContactPersonCode>
+                    <ShowSCN>tNO</ShowSCN>
+                    <Series>6</Series>
+                    <TaxDate>20120426</TaxDate>
+                    <PartialSupply>tYES</PartialSupply>
+                    <DocObjectCode>17</DocObjectCode>
+                    <ShipToCode>de Despacho</ShipToCode>
+                    <Indicator nil="true"></Indicator>
+                    <FederalTaxID>NOT111111DEF</FederalTaxID>
+                    <DiscountPercent>0.000000</DiscountPercent>
+                    <PaymentReference nil="true"></PaymentReference>
+                    <CreationDate>20120426</CreationDate>
+                    <UpdateDate>20120426</UpdateDate>
+                    <FinancialPeriod>76</FinancialPeriod>
+                    <TransNum nil="true">0</TransNum>
+                    <VatSum>56416.500000</VatSum>
+                    <VatSumSys>4273.980000</VatSumSys>
+                    <VatSumFc>0.000000</VatSumFc>
+                    <NetProcedure>tNO</NetProcedure>
+                    <DocTotalFc>0.000000</DocTotalFc>
+                    <DocTotalSys>32767.160000</DocTotalSys>
+                    <Form1099 nil="true">0</Form1099>
+                    <Box1099 nil="true"></Box1099>
+                    <RevisionPo>tNO</RevisionPo>
+                    <RequriedDate>20120426</RequriedDate>
+                    <CancelDate>20120526</CancelDate>
+                    <BlockDunning>tNO</BlockDunning>
+                    <Submitted>tNO</Submitted>
+                    <Segment>0</Segment>
+                    <PickStatus>tNO</PickStatus>
+                    <Pick>tNO</Pick>
+                    <PaymentMethod>INC_Transfer</PaymentMethod>
+                    <PaymentBlock>tNO</PaymentBlock>
+                    <PaymentBlockEntry nil="true">0</PaymentBlockEntry>
+                    <CentralBankIndicator nil="true"></CentralBankIndicator>
+                    <MaximumCashDiscount>tNO</MaximumCashDiscount>
+                    <Reserve>tNO</Reserve>
+                    <Project nil="true"></Project>
+                    <ExemptionValidityDateFrom nil="true"></ExemptionValidityDateFrom>
+                    <ExemptionValidityDateTo nil="true"></ExemptionValidityDateTo>
+                    <WareHouseUpdateType>dwh_CustomerOrders</WareHouseUpdateType>
+                    <Rounding>tNO</Rounding>
+                    <ExternalCorrectedDocNum nil="true"></ExternalCorrectedDocNum>
+                    <InternalCorrectedDocNum nil="true">0</InternalCorrectedDocNum>
+                    <NextCorrectingDocument nil="true">0</NextCorrectingDocument>
+                    <DeferredTax>tYES</DeferredTax>
+                    <TaxExemptionLetterNum nil="true"></TaxExemptionLetterNum>
+                    <WTApplied>0.000000</WTApplied>
+                    <WTAppliedFC>0.000000</WTAppliedFC>
+                    <BillOfExchangeReserved>tNO</BillOfExchangeReserved>
+                    <AgentCode nil="true"></AgentCode>
+                    <WTAppliedSC>0.000000</WTAppliedSC>
+                    <TotalEqualizationTax>0.000000</TotalEqualizationTax>
+                    <TotalEqualizationTaxFC>0.000000</TotalEqualizationTaxFC>
+                    <TotalEqualizationTaxSC>0.000000</TotalEqualizationTaxSC>
+                    <NumberOfInstallments>1</NumberOfInstallments>
+                    <ApplyTaxOnFirstInstallment>tNO</ApplyTaxOnFirstInstallment>
+                    <WTNonSubjectAmount>0.000000</WTNonSubjectAmount>
+                    <WTNonSubjectAmountSC>0.000000</WTNonSubjectAmountSC>
+                    <WTNonSubjectAmountFC>0.000000</WTNonSubjectAmountFC>
+                    <WTExemptedAmount>0.000000</WTExemptedAmount>
+                    <WTExemptedAmountSC>0.000000</WTExemptedAmountSC>
+                    <WTExemptedAmountFC>0.000000</WTExemptedAmountFC>
+                    <BaseAmount>376109.970000</BaseAmount>
+                    <BaseAmountSC>28493.180000</BaseAmountSC>
+                    <BaseAmountFC>0.000000</BaseAmountFC>
+                    <WTAmount>0.000000</WTAmount>
+                    <WTAmountSC>0.000000</WTAmountSC>
+                    <WTAmountFC>0.000000</WTAmountFC>
+                    <VatDate nil="true"></VatDate>
+                    <DocumentsOwner nil="true">0</DocumentsOwner>
+                    <FolioPrefixString nil="true"></FolioPrefixString>
+                    <FolioNumber nil="true">0</FolioNumber>
+                    <DocumentSubType>bod_None</DocumentSubType>
+                    <BPChannelCode nil="true"></BPChannelCode>
+                    <BPChannelContact nil="true">0</BPChannelContact>
+                    <Address2>300 Billings Drive   Suite 500
+
+Mexico D.F.,19083, DF
+MX</Address2>
+                    <DocumentStatus>bost_Open</DocumentStatus>
+                    <PeriodIndicator>Valor de p</PeriodIndicator>
+                    <PayToCode>de Facturacion</PayToCode>
+                    <ManualNumber nil="true"></ManualNumber>
+                    <UseShpdGoodsAct>tNO</UseShpdGoodsAct>
+                    <IsPayToBank>tNO</IsPayToBank>
+                    <PayToBankCountry nil="true"></PayToBankCountry>
+                    <PayToBankCode nil="true"></PayToBankCode>
+                    <PayToBankAccountNo nil="true"></PayToBankAccountNo>
+                    <PayToBankBranch nil="true"></PayToBankBranch>
+                    <BPL_IDAssignedToInvoice nil="true">0</BPL_IDAssignedToInvoice>
+                    <DownPayment>0.000000</DownPayment>
+                    <ReserveInvoice>tNO</ReserveInvoice>
+                    <LanguageCode>25</LanguageCode>
+                    <TrackingNumber nil="true"></TrackingNumber>
+                    <PickRemark nil="true"></PickRemark>
+                    <ClosingDate nil="true"></ClosingDate>
+                    <SequenceCode nil="true">0</SequenceCode>
+                    <SequenceSerial nil="true">0</SequenceSerial>
+                    <SeriesString nil="true"></SeriesString>
+                    <SubSeriesString nil="true"></SubSeriesString>
+                    <SequenceModel>0</SequenceModel>
+                    <UseCorrectionVATGroup>tNO</UseCorrectionVATGroup>
+                    <TotalDiscount>0.000000</TotalDiscount>
+                    <DownPaymentAmount>0.000000</DownPaymentAmount>
+                    <DownPaymentPercentage>0.000000</DownPaymentPercentage>
+                    <DownPaymentType>dptInvoice</DownPaymentType>
+                    <DownPaymentAmountSC>0.000000</DownPaymentAmountSC>
+                    <DownPaymentAmountFC>0.000000</DownPaymentAmountFC>
+                    <VatPercent>0.000000</VatPercent>
+                    <ServiceGrossProfitPercent>0.000000</ServiceGrossProfitPercent>
+                    <OpeningRemarks nil="true"></OpeningRemarks>
+                    <ClosingRemarks nil="true"></ClosingRemarks>
+                    <RoundingDiffAmount>0.000000</RoundingDiffAmount>
+                    <RoundingDiffAmountFC>0.000000</RoundingDiffAmountFC>
+                    <RoundingDiffAmountSC>0.000000</RoundingDiffAmountSC>
+                    <Cancelled>tNO</Cancelled>
+                    <SignatureInputMessage nil="true"></SignatureInputMessage>
+                    <SignatureDigest nil="true"></SignatureDigest>
+                    <CertificationNumber nil="true"></CertificationNumber>
+                    <PrivateKeyVersion nil="true">0</PrivateKeyVersion>
+                    <ControlAccount>11210000</ControlAccount>
+                    <InsuranceOperation347>tNO</InsuranceOperation347>
+                    <ArchiveNonremovableSalesQuotation>tNO</ArchiveNonremovableSalesQuotation>
+                    <GTSChecker nil="true">0</GTSChecker>
+                    <GTSPayee nil="true">0</GTSPayee>
+                    <ExtraMonth>0</ExtraMonth>
+                    <ExtraDays>30</ExtraDays>
+                    <CashDiscountDateOffset>0</CashDiscountDateOffset>
+                    <StartFrom>pdt_None</StartFrom>
+                    <NTSApproved>tNO</NTSApproved>
+                    <ETaxWebSite nil="true">0</ETaxWebSite>
+                    <ETaxNumber nil="true"></ETaxNumber>
+                    <NTSApprovedNumber nil="true"></NTSApprovedNumber>
+                    <EDocGenerationType>edocNotRelevant</EDocGenerationType>
+                    <EDocSeries nil="true">0</EDocSeries>
+                    <EDocNum nil="true"></EDocNum>
+                    <EDocExportFormat nil="true">0</EDocExportFormat>
+                    <EDocStatus>edoc_Ok</EDocStatus>
+                    <EDocErrorCode nil="true"></EDocErrorCode>
+                    <EDocErrorMessage nil="true"></EDocErrorMessage>
+                    <DownPaymentStatus>so_Open</DownPaymentStatus>
+                    <GroupSeries nil="true">0</GroupSeries>
+                    <GroupNumber nil="true">0</GroupNumber>
+                    <GroupHandWritten>tNO</GroupHandWritten>
+                    <ReopenOriginalDocument nil="true">tNO</ReopenOriginalDocument>
+                    <ReopenManuallyClosedOrCanceledDocument nil="true">tNO</ReopenManuallyClosedOrCanceledDocument>
+                    <CreateOnlineQuotation>tNO</CreateOnlineQuotation>
+                    <POSEquipmentNumber nil="true"></POSEquipmentNumber>
+                    <POSManufacturerSerialNumber nil="true"></POSManufacturerSerialNumber>
+                    <POSCashierNumber nil="true">0</POSCashierNumber>
+                    <ApplyCurrentVATRatesForDownPaymentsToDraw>tNO</ApplyCurrentVATRatesForDownPaymentsToDraw>
+                    <ClosingOption>coByCurrentSystemDate</ClosingOption>
+                    <SpecifiedClosingDate nil="true"></SpecifiedClosingDate>
+                    <OpenForLandedCosts>tYES</OpenForLandedCosts>
+                    <AuthorizationStatus>dasWithout</AuthorizationStatus>
+                    <TotalDiscountFC>0.000000</TotalDiscountFC>
+                    <TotalDiscountSC>0.000000</TotalDiscountSC>
+                    <RelevantToGTS>tNO</RelevantToGTS>
+                    <BPLName nil="true"></BPLName>
+                    <VATRegNum nil="true"></VATRegNum>
+                  </row>
+                </Documents>
+                <Document_Lines>
+                  <row>
+                    <LineNum>0</LineNum>
+                    <ItemCode>A00001</ItemCode>
+                    <ItemDescription>IBM Infoprint 1312</ItemDescription>
+                    <Quantity>1.000000</Quantity>
+                    <ShipDate>20120426</ShipDate>
+                    <Price>107460.050000</Price>
+                    <PriceAfterVAT>123579.060000</PriceAfterVAT>
+                    <Currency>MXP</Currency>
+                    <Rate>0.000000</Rate>
+                    <DiscountPercent>0.000000</DiscountPercent>
+                    <VendorNum></VendorNum>
+                    <SerialNum nil="true"></SerialNum>
+                    <WarehouseCode>01</WarehouseCode>
+                    <SalesPersonCode>1</SalesPersonCode>
+                    <CommisionPercent>0.000000</CommisionPercent>
+                    <TreeType>iNotATree</TreeType>
+                    <AccountCode>41110000</AccountCode>
+                    <UseBaseUnits>tNO</UseBaseUnits>
+                    <SupplierCatNum></SupplierCatNum>
+                    <CostingCode nil="true"></CostingCode>
+                    <ProjectCode></ProjectCode>
+                    <BarCode></BarCode>
+                    <VatGroup>B2</VatGroup>
+                    <Height1>10.000000</Height1>
+                    <Hight1Unit>4</Hight1Unit>
+                    <Height2>0.000000</Height2>
+                    <Height2Unit nil="true">0</Height2Unit>
+                    <Lengh1>10.000000</Lengh1>
+                    <Lengh1Unit>4</Lengh1Unit>
+                    <Lengh2>0.000000</Lengh2>
+                    <Lengh2Unit nil="true">0</Lengh2Unit>
+                    <Weight1>100.000000</Weight1>
+                    <Weight1Unit>3</Weight1Unit>
+                    <Weight2>0.000000</Weight2>
+                    <Weight2Unit nil="true">0</Weight2Unit>
+                    <Factor1>1.000000</Factor1>
+                    <Factor2>1.000000</Factor2>
+                    <Factor3>1.000000</Factor3>
+                    <Factor4>1.000000</Factor4>
+                    <BaseType>-1</BaseType>
+                    <BaseEntry nil="true">0</BaseEntry>
+                    <BaseLine nil="true">0</BaseLine>
+                    <Volume>1000.000000</Volume>
+                    <VolumeUnit>4</VolumeUnit>
+                    <Width1>10.000000</Width1>
+                    <Width1Unit>4</Width1Unit>
+                    <Width2>0.000000</Width2>
+                    <Width2Unit nil="true">0</Width2Unit>
+                    <Address></Address>
+                    <TaxCode>B2</TaxCode>
+                    <TaxType>tt_Yes</TaxType>
+                    <TaxLiable>tYES</TaxLiable>
+                    <PickStatus>tNO</PickStatus>
+                    <PickQuantity>0.000000</PickQuantity>
+                    <PickListIdNumber nil="true">0</PickListIdNumber>
+                    <OriginalItem nil="true"></OriginalItem>
+                    <BackOrder>tYES</BackOrder>
+                    <FreeText></FreeText>
+                    <ShippingMethod>3</ShippingMethod>
+                    <POTargetNum nil="true">0</POTargetNum>
+                    <POTargetEntry></POTargetEntry>
+                    <POTargetRowNum nil="true">0</POTargetRowNum>
+                    <CorrectionInvoiceItem>ciis_ShouldBe</CorrectionInvoiceItem>
+                    <CorrInvAmountToStock>0.000000</CorrInvAmountToStock>
+                    <CorrInvAmountToDiffAcct>0.000000</CorrInvAmountToDiffAcct>
+                    <AppliedTax>0.000000</AppliedTax>
+                    <AppliedTaxFC>0.000000</AppliedTaxFC>
+                    <AppliedTaxSC>0.000000</AppliedTaxSC>
+                    <WTLiable>tYES</WTLiable>
+                    <DeferredTax>tYES</DeferredTax>
+                    <EqualizationTaxPercent>0.000000</EqualizationTaxPercent>
+                    <TotalEqualizationTax>0.000000</TotalEqualizationTax>
+                    <TotalEqualizationTaxFC>0.000000</TotalEqualizationTaxFC>
+                    <TotalEqualizationTaxSC>0.000000</TotalEqualizationTaxSC>
+                    <NetTaxAmount>16119.010000</NetTaxAmount>
+                    <NetTaxAmountFC>0.000000</NetTaxAmountFC>
+                    <NetTaxAmountSC>1221.140000</NetTaxAmountSC>
+                    <MeasureUnit></MeasureUnit>
+                    <UnitsOfMeasurment>1.000000</UnitsOfMeasurment>
+                    <LineTotal>107460.050000</LineTotal>
+                    <TaxPercentagePerRow>15.000000</TaxPercentagePerRow>
+                    <TaxTotal>16119.010000</TaxTotal>
+                    <ConsumerSalesForecast>tYES</ConsumerSalesForecast>
+                    <ExciseAmount>0.000000</ExciseAmount>
+                    <TaxPerUnit>0.000000</TaxPerUnit>
+                    <TotalInclTax>0.000000</TotalInclTax>
+                    <CountryOrg nil="true"></CountryOrg>
+                    <SWW></SWW>
+                    <TransactionType nil="true"></TransactionType>
+                    <DistributeExpense>tYES</DistributeExpense>
+                    <ShipToCode>de Despacho</ShipToCode>
+                    <RowTotalFC>0.000000</RowTotalFC>
+                    <RowTotalSC>8140.910000</RowTotalSC>
+                    <LastBuyInmPrice>0.000000</LastBuyInmPrice>
+                    <LastBuyDistributeSumFc>0.000000</LastBuyDistributeSumFc>
+                    <LastBuyDistributeSumSc>0.000000</LastBuyDistributeSumSc>
+                    <LastBuyDistributeSum>0.000000</LastBuyDistributeSum>
+                    <StockDistributesumForeign>0.000000</StockDistributesumForeign>
+                    <StockDistributesumSystem>0.000000</StockDistributesumSystem>
+                    <StockDistributesum>0.000000</StockDistributesum>
+                    <StockInmPrice>0.000000</StockInmPrice>
+                    <PickStatusEx>dlps_NotPicked</PickStatusEx>
+                    <TaxBeforeDPM>0.000000</TaxBeforeDPM>
+                    <TaxBeforeDPMFC>0.000000</TaxBeforeDPMFC>
+                    <TaxBeforeDPMSC>0.000000</TaxBeforeDPMSC>
+                    <CFOPCode nil="true"></CFOPCode>
+                    <CSTCode nil="true"></CSTCode>
+                    <Usage nil="true">0</Usage>
+                    <TaxOnly>tNO</TaxOnly>
+                    <VisualOrder>0</VisualOrder>
+                    <BaseOpenQuantity>0.000000</BaseOpenQuantity>
+                    <UnitPrice>107460.050000</UnitPrice>
+                    <LineStatus>bost_Open</LineStatus>
+                    <PackageQuantity>1.000000</PackageQuantity>
+                    <Text></Text>
+                    <LineType>dlt_Regular</LineType>
+                    <COGSCostingCode nil="true"></COGSCostingCode>
+                    <COGSAccountCode>51110000</COGSAccountCode>
+                    <ChangeAssemlyBoMWarehouse>N</ChangeAssemlyBoMWarehouse>
+                    <GrossBuyPrice>76757.180000</GrossBuyPrice>
+                    <GrossBase>-1</GrossBase>
+                    <GrossProfitTotalBasePrice>76757.180000</GrossProfitTotalBasePrice>
+                    <CostingCode2 nil="true"></CostingCode2>
+                    <CostingCode3 nil="true"></CostingCode3>
+                    <CostingCode4 nil="true"></CostingCode4>
+                    <CostingCode5 nil="true"></CostingCode5>
+                    <ItemDetails></ItemDetails>
+                    <LocationCode nil="true">0</LocationCode>
+                    <ActualDeliveryDate nil="true"></ActualDeliveryDate>
+                    <RemainingOpenQuantity>1.000000</RemainingOpenQuantity>
+                    <OpenAmount>107460.050000</OpenAmount>
+                    <OpenAmountFC>0.000000</OpenAmountFC>
+                    <OpenAmountSC>8140.910000</OpenAmountSC>
+                    <ExLineNo nil="true"></ExLineNo>
+                    <RequiredDate nil="true"></RequiredDate>
+                    <RequiredQuantity>0.000000</RequiredQuantity>
+                    <COGSCostingCode2 nil="true"></COGSCostingCode2>
+                    <COGSCostingCode3 nil="true"></COGSCostingCode3>
+                    <COGSCostingCode4 nil="true"></COGSCostingCode4>
+                    <COGSCostingCode5 nil="true"></COGSCostingCode5>
+                    <CSTforIPI nil="true"></CSTforIPI>
+                    <CSTforPIS nil="true"></CSTforPIS>
+                    <CSTforCOFINS nil="true"></CSTforCOFINS>
+                    <CreditOriginCode nil="true"></CreditOriginCode>
+                    <WithoutInventoryMovement>tNO</WithoutInventoryMovement>
+                    <AgreementNo nil="true">0</AgreementNo>
+                    <AgreementRowNumber nil="true">0</AgreementRowNumber>
+                    <ShipToDescription>300 Billings Drive   Suite 500
+
+Mexico D.F.,19083, DF
+MX</ShipToDescription>
+                    <ActualBaseEntry nil="true">0</ActualBaseEntry>
+                    <ActualBaseLine nil="true">0</ActualBaseLine>
+                    <DocEntry>253</DocEntry>
+                  </row>
+                  <row>
+                    <LineNum>1</LineNum>
+                    <ItemCode>A00002</ItemCode>
+                    <ItemDescription>IBM Infoprint 1222</ItemDescription>
+                    <Quantity>1.000000</Quantity>
+                    <ShipDate>20120426</ShipDate>
+                    <Price>53730.030000</Price>
+                    <PriceAfterVAT>61789.530000</PriceAfterVAT>
+                    <Currency>MXP</Currency>
+                    <Rate>0.000000</Rate>
+                    <DiscountPercent>0.000000</DiscountPercent>
+                    <VendorNum></VendorNum>
+                    <SerialNum nil="true"></SerialNum>
+                    <WarehouseCode>01</WarehouseCode>
+                    <SalesPersonCode>1</SalesPersonCode>
+                    <CommisionPercent>0.000000</CommisionPercent>
+                    <TreeType>iNotATree</TreeType>
+                    <AccountCode>41110000</AccountCode>
+                    <UseBaseUnits>tNO</UseBaseUnits>
+                    <SupplierCatNum></SupplierCatNum>
+                    <CostingCode nil="true"></CostingCode>
+                    <ProjectCode></ProjectCode>
+                    <BarCode></BarCode>
+                    <VatGroup>B2</VatGroup>
+                    <Height1>10.000000</Height1>
+                    <Hight1Unit>4</Hight1Unit>
+                    <Height2>0.000000</Height2>
+                    <Height2Unit nil="true">0</Height2Unit>
+                    <Lengh1>10.000000</Lengh1>
+                    <Lengh1Unit>4</Lengh1Unit>
+                    <Lengh2>0.000000</Lengh2>
+                    <Lengh2Unit nil="true">0</Lengh2Unit>
+                    <Weight1>100.000000</Weight1>
+                    <Weight1Unit>3</Weight1Unit>
+                    <Weight2>0.000000</Weight2>
+                    <Weight2Unit nil="true">0</Weight2Unit>
+                    <Factor1>1.000000</Factor1>
+                    <Factor2>1.000000</Factor2>
+                    <Factor3>1.000000</Factor3>
+                    <Factor4>1.000000</Factor4>
+                    <BaseType>-1</BaseType>
+                    <BaseEntry nil="true">0</BaseEntry>
+                    <BaseLine nil="true">0</BaseLine>
+                    <Volume>1000.000000</Volume>
+                    <VolumeUnit>4</VolumeUnit>
+                    <Width1>10.000000</Width1>
+                    <Width1Unit>4</Width1Unit>
+                    <Width2>0.000000</Width2>
+                    <Width2Unit nil="true">0</Width2Unit>
+                    <Address></Address>
+                    <TaxCode>B2</TaxCode>
+                    <TaxType>tt_Yes</TaxType>
+                    <TaxLiable>tYES</TaxLiable>
+                    <PickStatus>tNO</PickStatus>
+                    <PickQuantity>0.000000</PickQuantity>
+                    <PickListIdNumber nil="true">0</PickListIdNumber>
+                    <OriginalItem nil="true"></OriginalItem>
+                    <BackOrder>tYES</BackOrder>
+                    <FreeText nil="true"></FreeText>
+                    <ShippingMethod>3</ShippingMethod>
+                    <POTargetNum nil="true">0</POTargetNum>
+                    <POTargetEntry></POTargetEntry>
+                    <POTargetRowNum nil="true">0</POTargetRowNum>
+                    <CorrectionInvoiceItem>ciis_ShouldBe</CorrectionInvoiceItem>
+                    <CorrInvAmountToStock>0.000000</CorrInvAmountToStock>
+                    <CorrInvAmountToDiffAcct>0.000000</CorrInvAmountToDiffAcct>
+                    <AppliedTax>0.000000</AppliedTax>
+                    <AppliedTaxFC>0.000000</AppliedTaxFC>
+                    <AppliedTaxSC>0.000000</AppliedTaxSC>
+                    <WTLiable>tYES</WTLiable>
+                    <DeferredTax>tYES</DeferredTax>
+                    <EqualizationTaxPercent>0.000000</EqualizationTaxPercent>
+                    <TotalEqualizationTax>0.000000</TotalEqualizationTax>
+                    <TotalEqualizationTaxFC>0.000000</TotalEqualizationTaxFC>
+                    <TotalEqualizationTaxSC>0.000000</TotalEqualizationTaxSC>
+                    <NetTaxAmount>8059.510000</NetTaxAmount>
+                    <NetTaxAmountFC>0.000000</NetTaxAmountFC>
+                    <NetTaxAmountSC>610.570000</NetTaxAmountSC>
+                    <MeasureUnit></MeasureUnit>
+                    <UnitsOfMeasurment>1.000000</UnitsOfMeasurment>
+                    <LineTotal>53730.030000</LineTotal>
+                    <TaxPercentagePerRow>15.000000</TaxPercentagePerRow>
+                    <TaxTotal>8059.510000</TaxTotal>
+                    <ConsumerSalesForecast>tYES</ConsumerSalesForecast>
+                    <ExciseAmount>0.000000</ExciseAmount>
+                    <TaxPerUnit>0.000000</TaxPerUnit>
+                    <TotalInclTax>0.000000</TotalInclTax>
+                    <CountryOrg nil="true"></CountryOrg>
+                    <SWW></SWW>
+                    <TransactionType nil="true"></TransactionType>
+                    <DistributeExpense>tYES</DistributeExpense>
+                    <ShipToCode>de Despacho</ShipToCode>
+                    <RowTotalFC>0.000000</RowTotalFC>
+                    <RowTotalSC>4070.460000</RowTotalSC>
+                    <LastBuyInmPrice>0.000000</LastBuyInmPrice>
+                    <LastBuyDistributeSumFc>0.000000</LastBuyDistributeSumFc>
+                    <LastBuyDistributeSumSc>0.000000</LastBuyDistributeSumSc>
+                    <LastBuyDistributeSum>0.000000</LastBuyDistributeSum>
+                    <StockDistributesumForeign>0.000000</StockDistributesumForeign>
+                    <StockDistributesumSystem>0.000000</StockDistributesumSystem>
+                    <StockDistributesum>0.000000</StockDistributesum>
+                    <StockInmPrice>0.000000</StockInmPrice>
+                    <PickStatusEx>dlps_NotPicked</PickStatusEx>
+                    <TaxBeforeDPM>0.000000</TaxBeforeDPM>
+                    <TaxBeforeDPMFC>0.000000</TaxBeforeDPMFC>
+                    <TaxBeforeDPMSC>0.000000</TaxBeforeDPMSC>
+                    <CFOPCode nil="true"></CFOPCode>
+                    <CSTCode nil="true"></CSTCode>
+                    <Usage nil="true">0</Usage>
+                    <TaxOnly>tNO</TaxOnly>
+                    <VisualOrder>1</VisualOrder>
+                    <BaseOpenQuantity>0.000000</BaseOpenQuantity>
+                    <UnitPrice>53730.030000</UnitPrice>
+                    <LineStatus>bost_Open</LineStatus>
+                    <PackageQuantity>1.000000</PackageQuantity>
+                    <Text nil="true"></Text>
+                    <LineType>dlt_Regular</LineType>
+                    <COGSCostingCode nil="true"></COGSCostingCode>
+                    <COGSAccountCode>51110000</COGSAccountCode>
+                    <ChangeAssemlyBoMWarehouse>N</ChangeAssemlyBoMWarehouse>
+                    <GrossBuyPrice>38378.590000</GrossBuyPrice>
+                    <GrossBase>-1</GrossBase>
+                    <GrossProfitTotalBasePrice>38378.590000</GrossProfitTotalBasePrice>
+                    <CostingCode2 nil="true"></CostingCode2>
+                    <CostingCode3 nil="true"></CostingCode3>
+                    <CostingCode4 nil="true"></CostingCode4>
+                    <CostingCode5 nil="true"></CostingCode5>
+                    <ItemDetails></ItemDetails>
+                    <LocationCode nil="true">0</LocationCode>
+                    <ActualDeliveryDate nil="true"></ActualDeliveryDate>
+                    <RemainingOpenQuantity>1.000000</RemainingOpenQuantity>
+                    <OpenAmount>53730.030000</OpenAmount>
+                    <OpenAmountFC>0.000000</OpenAmountFC>
+                    <OpenAmountSC>4070.460000</OpenAmountSC>
+                    <ExLineNo nil="true"></ExLineNo>
+                    <RequiredDate nil="true"></RequiredDate>
+                    <RequiredQuantity>0.000000</RequiredQuantity>
+                    <COGSCostingCode2 nil="true"></COGSCostingCode2>
+                    <COGSCostingCode3 nil="true"></COGSCostingCode3>
+                    <COGSCostingCode4 nil="true"></COGSCostingCode4>
+                    <COGSCostingCode5 nil="true"></COGSCostingCode5>
+                    <CSTforIPI nil="true"></CSTforIPI>
+                    <CSTforPIS nil="true"></CSTforPIS>
+                    <CSTforCOFINS nil="true"></CSTforCOFINS>
+                    <CreditOriginCode nil="true"></CreditOriginCode>
+                    <WithoutInventoryMovement>tNO</WithoutInventoryMovement>
+                    <AgreementNo nil="true">0</AgreementNo>
+                    <AgreementRowNumber nil="true">0</AgreementRowNumber>
+                    <ShipToDescription>300 Billings Drive   Suite 500
+
+Mexico D.F.,19083, DF
+MX</ShipToDescription>
+                    <ActualBaseEntry nil="true">0</ActualBaseEntry>
+                    <ActualBaseLine nil="true">0</ActualBaseLine>
+                    <DocEntry>253</DocEntry>
+                  </row>
+                  <row>
+                    <LineNum>2</LineNum>
+                    <ItemCode>A00003</ItemCode>
+                    <ItemDescription>IBM Infoprint 1226</ItemDescription>
+                    <Quantity>1.000000</Quantity>
+                    <ShipDate>20120426</ShipDate>
+                    <Price>80594.930000</Price>
+                    <PriceAfterVAT>92684.170000</PriceAfterVAT>
+                    <Currency>MXP</Currency>
+                    <Rate>0.000000</Rate>
+                    <DiscountPercent>0.000000</DiscountPercent>
+                    <VendorNum></VendorNum>
+                    <SerialNum nil="true"></SerialNum>
+                    <WarehouseCode>01</WarehouseCode>
+                    <SalesPersonCode>1</SalesPersonCode>
+                    <CommisionPercent>0.000000</CommisionPercent>
+                    <TreeType>iNotATree</TreeType>
+                    <AccountCode>41110000</AccountCode>
+                    <UseBaseUnits>tNO</UseBaseUnits>
+                    <SupplierCatNum></SupplierCatNum>
+                    <CostingCode nil="true"></CostingCode>
+                    <ProjectCode></ProjectCode>
+                    <BarCode></BarCode>
+                    <VatGroup>B2</VatGroup>
+                    <Height1>0.000000</Height1>
+                    <Hight1Unit nil="true">0</Hight1Unit>
+                    <Height2>0.000000</Height2>
+                    <Height2Unit nil="true">0</Height2Unit>
+                    <Lengh1>0.000000</Lengh1>
+                    <Lengh1Unit nil="true">0</Lengh1Unit>
+                    <Lengh2>0.000000</Lengh2>
+                    <Lengh2Unit nil="true">0</Lengh2Unit>
+                    <Weight1>0.000000</Weight1>
+                    <Weight1Unit nil="true">0</Weight1Unit>
+                    <Weight2>0.000000</Weight2>
+                    <Weight2Unit nil="true">0</Weight2Unit>
+                    <Factor1>1.000000</Factor1>
+                    <Factor2>1.000000</Factor2>
+                    <Factor3>1.000000</Factor3>
+                    <Factor4>1.000000</Factor4>
+                    <BaseType>-1</BaseType>
+                    <BaseEntry nil="true">0</BaseEntry>
+                    <BaseLine nil="true">0</BaseLine>
+                    <Volume>0.000000</Volume>
+                    <VolumeUnit>4</VolumeUnit>
+                    <Width1>0.000000</Width1>
+                    <Width1Unit nil="true">0</Width1Unit>
+                    <Width2>0.000000</Width2>
+                    <Width2Unit nil="true">0</Width2Unit>
+                    <Address></Address>
+                    <TaxCode>B2</TaxCode>
+                    <TaxType>tt_Yes</TaxType>
+                    <TaxLiable>tYES</TaxLiable>
+                    <PickStatus>tNO</PickStatus>
+                    <PickQuantity>0.000000</PickQuantity>
+                    <PickListIdNumber nil="true">0</PickListIdNumber>
+                    <OriginalItem nil="true"></OriginalItem>
+                    <BackOrder>tYES</BackOrder>
+                    <FreeText nil="true"></FreeText>
+                    <ShippingMethod>3</ShippingMethod>
+                    <POTargetNum nil="true">0</POTargetNum>
+                    <POTargetEntry></POTargetEntry>
+                    <POTargetRowNum nil="true">0</POTargetRowNum>
+                    <CorrectionInvoiceItem>ciis_ShouldBe</CorrectionInvoiceItem>
+                    <CorrInvAmountToStock>0.000000</CorrInvAmountToStock>
+                    <CorrInvAmountToDiffAcct>0.000000</CorrInvAmountToDiffAcct>
+                    <AppliedTax>0.000000</AppliedTax>
+                    <AppliedTaxFC>0.000000</AppliedTaxFC>
+                    <AppliedTaxSC>0.000000</AppliedTaxSC>
+                    <WTLiable>tYES</WTLiable>
+                    <DeferredTax>tYES</DeferredTax>
+                    <EqualizationTaxPercent>0.000000</EqualizationTaxPercent>
+                    <TotalEqualizationTax>0.000000</TotalEqualizationTax>
+                    <TotalEqualizationTaxFC>0.000000</TotalEqualizationTaxFC>
+                    <TotalEqualizationTaxSC>0.000000</TotalEqualizationTaxSC>
+                    <NetTaxAmount>12089.240000</NetTaxAmount>
+                    <NetTaxAmountFC>0.000000</NetTaxAmountFC>
+                    <NetTaxAmountSC>915.850000</NetTaxAmountSC>
+                    <MeasureUnit></MeasureUnit>
+                    <UnitsOfMeasurment>1.000000</UnitsOfMeasurment>
+                    <LineTotal>80594.930000</LineTotal>
+                    <TaxPercentagePerRow>15.000000</TaxPercentagePerRow>
+                    <TaxTotal>12089.240000</TaxTotal>
+                    <ConsumerSalesForecast>tYES</ConsumerSalesForecast>
+                    <ExciseAmount>0.000000</ExciseAmount>
+                    <TaxPerUnit>0.000000</TaxPerUnit>
+                    <TotalInclTax>0.000000</TotalInclTax>
+                    <CountryOrg nil="true"></CountryOrg>
+                    <SWW></SWW>
+                    <TransactionType nil="true"></TransactionType>
+                    <DistributeExpense>tYES</DistributeExpense>
+                    <ShipToCode>de Despacho</ShipToCode>
+                    <RowTotalFC>0.000000</RowTotalFC>
+                    <RowTotalSC>6105.680000</RowTotalSC>
+                    <LastBuyInmPrice>0.000000</LastBuyInmPrice>
+                    <LastBuyDistributeSumFc>0.000000</LastBuyDistributeSumFc>
+                    <LastBuyDistributeSumSc>0.000000</LastBuyDistributeSumSc>
+                    <LastBuyDistributeSum>0.000000</LastBuyDistributeSum>
+                    <StockDistributesumForeign>0.000000</StockDistributesumForeign>
+                    <StockDistributesumSystem>0.000000</StockDistributesumSystem>
+                    <StockDistributesum>0.000000</StockDistributesum>
+                    <StockInmPrice>0.000000</StockInmPrice>
+                    <PickStatusEx>dlps_NotPicked</PickStatusEx>
+                    <TaxBeforeDPM>0.000000</TaxBeforeDPM>
+                    <TaxBeforeDPMFC>0.000000</TaxBeforeDPMFC>
+                    <TaxBeforeDPMSC>0.000000</TaxBeforeDPMSC>
+                    <CFOPCode nil="true"></CFOPCode>
+                    <CSTCode nil="true"></CSTCode>
+                    <Usage nil="true">0</Usage>
+                    <TaxOnly>tNO</TaxOnly>
+                    <VisualOrder>2</VisualOrder>
+                    <BaseOpenQuantity>0.000000</BaseOpenQuantity>
+                    <UnitPrice>80594.930000</UnitPrice>
+                    <LineStatus>bost_Open</LineStatus>
+                    <PackageQuantity>1.000000</PackageQuantity>
+                    <Text nil="true"></Text>
+                    <LineType>dlt_Regular</LineType>
+                    <COGSCostingCode nil="true"></COGSCostingCode>
+                    <COGSAccountCode>51110000</COGSAccountCode>
+                    <ChangeAssemlyBoMWarehouse>N</ChangeAssemlyBoMWarehouse>
+                    <GrossBuyPrice>57567.810000</GrossBuyPrice>
+                    <GrossBase>-1</GrossBase>
+                    <GrossProfitTotalBasePrice>57567.810000</GrossProfitTotalBasePrice>
+                    <CostingCode2 nil="true"></CostingCode2>
+                    <CostingCode3 nil="true"></CostingCode3>
+                    <CostingCode4 nil="true"></CostingCode4>
+                    <CostingCode5 nil="true"></CostingCode5>
+                    <ItemDetails></ItemDetails>
+                    <LocationCode nil="true">0</LocationCode>
+                    <ActualDeliveryDate nil="true"></ActualDeliveryDate>
+                    <RemainingOpenQuantity>1.000000</RemainingOpenQuantity>
+                    <OpenAmount>80594.930000</OpenAmount>
+                    <OpenAmountFC>0.000000</OpenAmountFC>
+                    <OpenAmountSC>6105.680000</OpenAmountSC>
+                    <ExLineNo nil="true"></ExLineNo>
+                    <RequiredDate nil="true"></RequiredDate>
+                    <RequiredQuantity>0.000000</RequiredQuantity>
+                    <COGSCostingCode2 nil="true"></COGSCostingCode2>
+                    <COGSCostingCode3 nil="true"></COGSCostingCode3>
+                    <COGSCostingCode4 nil="true"></COGSCostingCode4>
+                    <COGSCostingCode5 nil="true"></COGSCostingCode5>
+                    <CSTforIPI nil="true"></CSTforIPI>
+                    <CSTforPIS nil="true"></CSTforPIS>
+                    <CSTforCOFINS nil="true"></CSTforCOFINS>
+                    <CreditOriginCode nil="true"></CreditOriginCode>
+                    <WithoutInventoryMovement>tNO</WithoutInventoryMovement>
+                    <AgreementNo nil="true">0</AgreementNo>
+                    <AgreementRowNumber nil="true">0</AgreementRowNumber>
+                    <ShipToDescription>300 Billings Drive   Suite 500
+
+Mexico D.F.,19083, DF
+MX</ShipToDescription>
+                    <ActualBaseEntry nil="true">0</ActualBaseEntry>
+                    <ActualBaseLine nil="true">0</ActualBaseLine>
+                    <DocEntry>253</DocEntry>
+                  </row>
+                  <row>
+                    <LineNum>3</LineNum>
+                    <ItemCode>A00004</ItemCode>
+                    <ItemDescription>HP Color Laser Jet 5</ItemDescription>
+                    <Quantity>1.000000</Quantity>
+                    <ShipDate>20120426</ShipDate>
+                    <Price>134324.960000</Price>
+                    <PriceAfterVAT>154473.700000</PriceAfterVAT>
+                    <Currency>MXP</Currency>
+                    <Rate>0.000000</Rate>
+                    <DiscountPercent>0.000000</DiscountPercent>
+                    <VendorNum></VendorNum>
+                    <SerialNum nil="true"></SerialNum>
+                    <WarehouseCode>01</WarehouseCode>
+                    <SalesPersonCode>1</SalesPersonCode>
+                    <CommisionPercent>0.000000</CommisionPercent>
+                    <TreeType>iNotATree</TreeType>
+                    <AccountCode>41110000</AccountCode>
+                    <UseBaseUnits>tNO</UseBaseUnits>
+                    <SupplierCatNum></SupplierCatNum>
+                    <CostingCode nil="true"></CostingCode>
+                    <ProjectCode></ProjectCode>
+                    <BarCode></BarCode>
+                    <VatGroup>B2</VatGroup>
+                    <Height1>0.000000</Height1>
+                    <Hight1Unit nil="true">0</Hight1Unit>
+                    <Height2>0.000000</Height2>
+                    <Height2Unit nil="true">0</Height2Unit>
+                    <Lengh1>0.000000</Lengh1>
+                    <Lengh1Unit nil="true">0</Lengh1Unit>
+                    <Lengh2>0.000000</Lengh2>
+                    <Lengh2Unit nil="true">0</Lengh2Unit>
+                    <Weight1>0.000000</Weight1>
+                    <Weight1Unit nil="true">0</Weight1Unit>
+                    <Weight2>0.000000</Weight2>
+                    <Weight2Unit nil="true">0</Weight2Unit>
+                    <Factor1>1.000000</Factor1>
+                    <Factor2>1.000000</Factor2>
+                    <Factor3>1.000000</Factor3>
+                    <Factor4>1.000000</Factor4>
+                    <BaseType>-1</BaseType>
+                    <BaseEntry nil="true">0</BaseEntry>
+                    <BaseLine nil="true">0</BaseLine>
+                    <Volume>0.000000</Volume>
+                    <VolumeUnit>4</VolumeUnit>
+                    <Width1>0.000000</Width1>
+                    <Width1Unit nil="true">0</Width1Unit>
+                    <Width2>0.000000</Width2>
+                    <Width2Unit nil="true">0</Width2Unit>
+                    <Address></Address>
+                    <TaxCode>B2</TaxCode>
+                    <TaxType>tt_Yes</TaxType>
+                    <TaxLiable>tYES</TaxLiable>
+                    <PickStatus>tNO</PickStatus>
+                    <PickQuantity>0.000000</PickQuantity>
+                    <PickListIdNumber nil="true">0</PickListIdNumber>
+                    <OriginalItem nil="true"></OriginalItem>
+                    <BackOrder>tYES</BackOrder>
+                    <FreeText nil="true"></FreeText>
+                    <ShippingMethod>3</ShippingMethod>
+                    <POTargetNum nil="true">0</POTargetNum>
+                    <POTargetEntry></POTargetEntry>
+                    <POTargetRowNum nil="true">0</POTargetRowNum>
+                    <CorrectionInvoiceItem>ciis_ShouldBe</CorrectionInvoiceItem>
+                    <CorrInvAmountToStock>0.000000</CorrInvAmountToStock>
+                    <CorrInvAmountToDiffAcct>0.000000</CorrInvAmountToDiffAcct>
+                    <AppliedTax>0.000000</AppliedTax>
+                    <AppliedTaxFC>0.000000</AppliedTaxFC>
+                    <AppliedTaxSC>0.000000</AppliedTaxSC>
+                    <WTLiable>tYES</WTLiable>
+                    <DeferredTax>tYES</DeferredTax>
+                    <EqualizationTaxPercent>0.000000</EqualizationTaxPercent>
+                    <TotalEqualizationTax>0.000000</TotalEqualizationTax>
+                    <TotalEqualizationTaxFC>0.000000</TotalEqualizationTaxFC>
+                    <TotalEqualizationTaxSC>0.000000</TotalEqualizationTaxSC>
+                    <NetTaxAmount>20148.740000</NetTaxAmount>
+                    <NetTaxAmountFC>0.000000</NetTaxAmountFC>
+                    <NetTaxAmountSC>1526.420000</NetTaxAmountSC>
+                    <MeasureUnit></MeasureUnit>
+                    <UnitsOfMeasurment>1.000000</UnitsOfMeasurment>
+                    <LineTotal>134324.960000</LineTotal>
+                    <TaxPercentagePerRow>15.000000</TaxPercentagePerRow>
+                    <TaxTotal>20148.740000</TaxTotal>
+                    <ConsumerSalesForecast>tYES</ConsumerSalesForecast>
+                    <ExciseAmount>0.000000</ExciseAmount>
+                    <TaxPerUnit>0.000000</TaxPerUnit>
+                    <TotalInclTax>0.000000</TotalInclTax>
+                    <CountryOrg nil="true"></CountryOrg>
+                    <SWW></SWW>
+                    <TransactionType nil="true"></TransactionType>
+                    <DistributeExpense>tYES</DistributeExpense>
+                    <ShipToCode>de Despacho</ShipToCode>
+                    <RowTotalFC>0.000000</RowTotalFC>
+                    <RowTotalSC>10176.130000</RowTotalSC>
+                    <LastBuyInmPrice>0.000000</LastBuyInmPrice>
+                    <LastBuyDistributeSumFc>0.000000</LastBuyDistributeSumFc>
+                    <LastBuyDistributeSumSc>0.000000</LastBuyDistributeSumSc>
+                    <LastBuyDistributeSum>0.000000</LastBuyDistributeSum>
+                    <StockDistributesumForeign>0.000000</StockDistributesumForeign>
+                    <StockDistributesumSystem>0.000000</StockDistributesumSystem>
+                    <StockDistributesum>0.000000</StockDistributesum>
+                    <StockInmPrice>0.000000</StockInmPrice>
+                    <PickStatusEx>dlps_NotPicked</PickStatusEx>
+                    <TaxBeforeDPM>0.000000</TaxBeforeDPM>
+                    <TaxBeforeDPMFC>0.000000</TaxBeforeDPMFC>
+                    <TaxBeforeDPMSC>0.000000</TaxBeforeDPMSC>
+                    <CFOPCode nil="true"></CFOPCode>
+                    <CSTCode nil="true"></CSTCode>
+                    <Usage nil="true">0</Usage>
+                    <TaxOnly>tNO</TaxOnly>
+                    <VisualOrder>3</VisualOrder>
+                    <BaseOpenQuantity>0.000000</BaseOpenQuantity>
+                    <UnitPrice>134324.960000</UnitPrice>
+                    <LineStatus>bost_Open</LineStatus>
+                    <PackageQuantity>1.000000</PackageQuantity>
+                    <Text nil="true"></Text>
+                    <LineType>dlt_Regular</LineType>
+                    <COGSCostingCode nil="true"></COGSCostingCode>
+                    <COGSAccountCode>51110000</COGSAccountCode>
+                    <ChangeAssemlyBoMWarehouse>N</ChangeAssemlyBoMWarehouse>
+                    <GrossBuyPrice>95946.400000</GrossBuyPrice>
+                    <GrossBase>-1</GrossBase>
+                    <GrossProfitTotalBasePrice>95946.400000</GrossProfitTotalBasePrice>
+                    <CostingCode2 nil="true"></CostingCode2>
+                    <CostingCode3 nil="true"></CostingCode3>
+                    <CostingCode4 nil="true"></CostingCode4>
+                    <CostingCode5 nil="true"></CostingCode5>
+                    <ItemDetails></ItemDetails>
+                    <LocationCode nil="true">0</LocationCode>
+                    <ActualDeliveryDate nil="true"></ActualDeliveryDate>
+                    <RemainingOpenQuantity>1.000000</RemainingOpenQuantity>
+                    <OpenAmount>134324.960000</OpenAmount>
+                    <OpenAmountFC>0.000000</OpenAmountFC>
+                    <OpenAmountSC>10176.130000</OpenAmountSC>
+                    <ExLineNo nil="true"></ExLineNo>
+                    <RequiredDate nil="true"></RequiredDate>
+                    <RequiredQuantity>0.000000</RequiredQuantity>
+                    <COGSCostingCode2 nil="true"></COGSCostingCode2>
+                    <COGSCostingCode3 nil="true"></COGSCostingCode3>
+                    <COGSCostingCode4 nil="true"></COGSCostingCode4>
+                    <COGSCostingCode5 nil="true"></COGSCostingCode5>
+                    <CSTforIPI nil="true"></CSTforIPI>
+                    <CSTforPIS nil="true"></CSTforPIS>
+                    <CSTforCOFINS nil="true"></CSTforCOFINS>
+                    <CreditOriginCode nil="true"></CreditOriginCode>
+                    <WithoutInventoryMovement>tNO</WithoutInventoryMovement>
+                    <AgreementNo nil="true">0</AgreementNo>
+                    <AgreementRowNumber nil="true">0</AgreementRowNumber>
+                    <ShipToDescription>300 Billings Drive   Suite 500
+
+Mexico D.F.,19083, DF
+MX</ShipToDescription>
+                    <ActualBaseEntry nil="true">0</ActualBaseEntry>
+                    <ActualBaseLine nil="true">0</ActualBaseLine>
+                    <DocEntry>253</DocEntry>
+                  </row>
+                </Document_Lines>
+                <LineTaxJurisdictions>
+                  <row>
+                    <JurisdictionCode>B2</JurisdictionCode>
+                    <JurisdictionType>2</JurisdictionType>
+                    <TaxAmount>16119.010000</TaxAmount>
+                    <TaxAmountSC>1221.140000</TaxAmountSC>
+                    <TaxAmountFC>0.000000</TaxAmountFC>
+                    <TaxRate>15.000000</TaxRate>
+                    <DocEntry>253</DocEntry>
+                    <LineNumber>0</LineNumber>
+                    <RowSequence>0</RowSequence>
+                  </row>
+                  <row>
+                    <JurisdictionCode>B2</JurisdictionCode>
+                    <JurisdictionType>2</JurisdictionType>
+                    <TaxAmount>8059.510000</TaxAmount>
+                    <TaxAmountSC>610.570000</TaxAmountSC>
+                    <TaxAmountFC>0.000000</TaxAmountFC>
+                    <TaxRate>15.000000</TaxRate>
+                    <DocEntry>253</DocEntry>
+                    <LineNumber>1</LineNumber>
+                    <RowSequence>1</RowSequence>
+                  </row>
+                  <row>
+                    <JurisdictionCode>B2</JurisdictionCode>
+                    <JurisdictionType>2</JurisdictionType>
+                    <TaxAmount>12089.240000</TaxAmount>
+                    <TaxAmountSC>915.850000</TaxAmountSC>
+                    <TaxAmountFC>0.000000</TaxAmountFC>
+                    <TaxRate>15.000000</TaxRate>
+                    <DocEntry>253</DocEntry>
+                    <LineNumber>2</LineNumber>
+                    <RowSequence>2</RowSequence>
+                  </row>
+                  <row>
+                    <JurisdictionCode>B2</JurisdictionCode>
+                    <JurisdictionType>2</JurisdictionType>
+                    <TaxAmount>20148.740000</TaxAmount>
+                    <TaxAmountSC>1526.420000</TaxAmountSC>
+                    <TaxAmountFC>0.000000</TaxAmountFC>
+                    <TaxRate>15.000000</TaxRate>
+                    <DocEntry>253</DocEntry>
+                    <LineNumber>3</LineNumber>
+                    <RowSequence>3</RowSequence>
+                  </row>
+                </LineTaxJurisdictions>
+                <LineExpenseTaxJurisdictions>
+                  <row>
+                    <JurisdictionCode>B2</JurisdictionCode>
+                    <JurisdictionType>2</JurisdictionType>
+                    <TaxAmount>16119.010000</TaxAmount>
+                    <TaxAmountSC>1221.140000</TaxAmountSC>
+                    <TaxAmountFC>0.000000</TaxAmountFC>
+                    <TaxRate>15.000000</TaxRate>
+                    <DocEntry>253</DocEntry>
+                    <LineNumber>0</LineNumber>
+                    <RowSequence>0</RowSequence>
+                  </row>
+                  <row>
+                    <JurisdictionCode>B2</JurisdictionCode>
+                    <JurisdictionType>2</JurisdictionType>
+                    <TaxAmount>8059.510000</TaxAmount>
+                    <TaxAmountSC>610.570000</TaxAmountSC>
+                    <TaxAmountFC>0.000000</TaxAmountFC>
+                    <TaxRate>15.000000</TaxRate>
+                    <DocEntry>253</DocEntry>
+                    <LineNumber>1</LineNumber>
+                    <RowSequence>1</RowSequence>
+                  </row>
+                  <row>
+                    <JurisdictionCode>B2</JurisdictionCode>
+                    <JurisdictionType>2</JurisdictionType>
+                    <TaxAmount>12089.240000</TaxAmount>
+                    <TaxAmountSC>915.850000</TaxAmountSC>
+                    <TaxAmountFC>0.000000</TaxAmountFC>
+                    <TaxRate>15.000000</TaxRate>
+                    <DocEntry>253</DocEntry>
+                    <LineNumber>2</LineNumber>
+                    <RowSequence>2</RowSequence>
+                  </row>
+                  <row>
+                    <JurisdictionCode>B2</JurisdictionCode>
+                    <JurisdictionType>2</JurisdictionType>
+                    <TaxAmount>20148.740000</TaxAmount>
+                    <TaxAmountSC>1526.420000</TaxAmountSC>
+                    <TaxAmountFC>0.000000</TaxAmountFC>
+                    <TaxRate>15.000000</TaxRate>
+                    <DocEntry>253</DocEntry>
+                    <LineNumber>3</LineNumber>
+                    <RowSequence>3</RowSequence>
+                  </row>
+                </LineExpenseTaxJurisdictions>
+                <DocExpenseTaxJurisdictions>
+                  <row>
+                    <JurisdictionCode>B2</JurisdictionCode>
+                    <JurisdictionType>2</JurisdictionType>
+                    <TaxAmount>16119.010000</TaxAmount>
+                    <TaxAmountSC>1221.140000</TaxAmountSC>
+                    <TaxAmountFC>0.000000</TaxAmountFC>
+                    <TaxRate>15.000000</TaxRate>
+                    <DocEntry>253</DocEntry>
+                    <LineNumber>0</LineNumber>
+                    <RowSequence>0</RowSequence>
+                  </row>
+                  <row>
+                    <JurisdictionCode>B2</JurisdictionCode>
+                    <JurisdictionType>2</JurisdictionType>
+                    <TaxAmount>8059.510000</TaxAmount>
+                    <TaxAmountSC>610.570000</TaxAmountSC>
+                    <TaxAmountFC>0.000000</TaxAmountFC>
+                    <TaxRate>15.000000</TaxRate>
+                    <DocEntry>253</DocEntry>
+                    <LineNumber>1</LineNumber>
+                    <RowSequence>1</RowSequence>
+                  </row>
+                  <row>
+                    <JurisdictionCode>B2</JurisdictionCode>
+                    <JurisdictionType>2</JurisdictionType>
+                    <TaxAmount>12089.240000</TaxAmount>
+                    <TaxAmountSC>915.850000</TaxAmountSC>
+                    <TaxAmountFC>0.000000</TaxAmountFC>
+                    <TaxRate>15.000000</TaxRate>
+                    <DocEntry>253</DocEntry>
+                    <LineNumber>2</LineNumber>
+                    <RowSequence>2</RowSequence>
+                  </row>
+                  <row>
+                    <JurisdictionCode>B2</JurisdictionCode>
+                    <JurisdictionType>2</JurisdictionType>
+                    <TaxAmount>20148.740000</TaxAmount>
+                    <TaxAmountSC>1526.420000</TaxAmountSC>
+                    <TaxAmountFC>0.000000</TaxAmountFC>
+                    <TaxRate>15.000000</TaxRate>
+                    <DocEntry>253</DocEntry>
+                    <LineNumber>3</LineNumber>
+                    <RowSequence>3</RowSequence>
+                  </row>
+                </DocExpenseTaxJurisdictions>
+                <TaxExtension>
+                  <row>
+                    <TaxId0 nil="true"></TaxId0>
+                    <TaxId1 nil="true"></TaxId1>
+                    <TaxId2 nil="true"></TaxId2>
+                    <TaxId3 nil="true"></TaxId3>
+                    <TaxId4 nil="true"></TaxId4>
+                    <TaxId5 nil="true"></TaxId5>
+                    <TaxId6 nil="true"></TaxId6>
+                    <TaxId7 nil="true"></TaxId7>
+                    <TaxId8 nil="true"></TaxId8>
+                    <TaxId9 nil="true"></TaxId9>
+                    <State nil="true"></State>
+                    <County nil="true"></County>
+                    <Incoterms nil="true"></Incoterms>
+                    <Vehicle nil="true"></Vehicle>
+                    <VehicleState nil="true"></VehicleState>
+                    <NFRef nil="true"></NFRef>
+                    <Carrier nil="true"></Carrier>
+                    <PackQuantity nil="true">0</PackQuantity>
+                    <PackDescription nil="true"></PackDescription>
+                    <Brand nil="true"></Brand>
+                    <ShipUnitNo nil="true">0</ShipUnitNo>
+                    <NetWeight>0.000000</NetWeight>
+                    <GrossWeight>0.000000</GrossWeight>
+                    <StreetS>300 Billings Drive</StreetS>
+                    <BlockS>Suite 500</BlockS>
+                    <BuildingS></BuildingS>
+                    <CityS>Mexico D.F.</CityS>
+                    <ZipCodeS>19083</ZipCodeS>
+                    <CountyS nil="true"></CountyS>
+                    <StateS>DF</StateS>
+                    <CountryS>MX</CountryS>
+                    <StreetB>300 Billings Drive</StreetB>
+                    <BlockB>Suite 500</BlockB>
+                    <BuildingB></BuildingB>
+                    <CityB>Mexico D.F.</CityB>
+                    <ZipCodeB>19083</ZipCodeB>
+                    <CountyB nil="true"></CountyB>
+                    <StateB>DF</StateB>
+                    <CountryB>MX</CountryB>
+                    <ImportOrExport nil="true">MX</ImportOrExport>
+                  </row>
+                </TaxExtension>
+                <AddressExtension>
+                  <row>
+                    <ShipToStreet>300 Billings Drive</ShipToStreet>
+                    <ShipToStreetNo nil="true"></ShipToStreetNo>
+                    <ShipToBlock>Suite 500</ShipToBlock>
+                    <ShipToBuilding></ShipToBuilding>
+                    <ShipToCity>Mexico D.F.</ShipToCity>
+                    <ShipToZipCode>19083</ShipToZipCode>
+                    <ShipToCounty nil="true"></ShipToCounty>
+                    <ShipToState>DF</ShipToState>
+                    <ShipToCountry>MX</ShipToCountry>
+                    <ShipToAddressType nil="true"></ShipToAddressType>
+                    <BillToStreet>300 Billings Drive</BillToStreet>
+                    <BillToStreetNo nil="true"></BillToStreetNo>
+                    <BillToBlock>Suite 500</BillToBlock>
+                    <BillToBuilding></BillToBuilding>
+                    <BillToCity>Mexico D.F.</BillToCity>
+                    <BillToZipCode>19083</BillToZipCode>
+                    <BillToCounty nil="true"></BillToCounty>
+                    <BillToState>DF</BillToState>
+                    <BillToCountry>MX</BillToCountry>
+                    <BillToAddressType nil="true"></BillToAddressType>
+                  </row>
+                </AddressExtension>
+              </BO>
+            </BOM>
+          </Payload>
+        </Body>
+      </Msg></Payload></Body></Msg>

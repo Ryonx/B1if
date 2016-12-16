@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><BOM xmlns:bfa="urn:com.sap.b1i.bizprocessor:bizatoms">
+	<TargetDB>SBODemoMx</TargetDB>
+	<TopSQL>20</TopSQL>
+	<TableName>OINV</TableName>
+	<BO>
+		<Documents>
+			<row>
+				<DocDueDate>20120426</DocDueDate>
+				<CardCode>C20000</CardCode>
+				<TaxDate>20120426</TaxDate>
+			</row>
+		</Documents>
+		<Document_Lines>
+			<row>
+				<ItemCode>A00001</ItemCode>
+				<Quantity>1.000000</Quantity>
+				<UnitPrice>200</UnitPrice>
+			</row>
+		</Document_Lines>
+	</BO>
+</BOM>

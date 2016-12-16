@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><Msg xmlns:bfa="urn:com.sap.b1i.bizprocessor:bizatoms" xmlns="urn:com.sap.b1i.vplatform:entity" MessageId="12042712575865628099C0A80110E40E" BeginTimeStamp="20120427125758" recording="true" logmsg="0000" SubMessageId="1" status="success"><Header><ProcStream>S.</ProcStream><Resumption><starter ipo="/vP.0010000103.in_WCSX/com.sap.b1i.vplatform.runtime/INB_WS_CALL_SYNC_XPT/INB_WS_CALL_SYNC_XPT.ipo/proc"></starter></Resumption><IPO Id="INB_WS_CALL_SYNC_XPT" tid="12042711294365628079C0A801101328"></IPO><Sender Id="0010000103" ObjId="BOM"></Sender><Successor Id="" Mode=""></Successor><Identification Ident="Root Tag" IdPar="n.a."></Identification><nsList></nsList><vBIU Id="SA.B1WS" ver="1.0.0" SId="SA.B1Scenario" filter="" phase=""></vBIU><Variables><var id="userid" value="no_authentication"></var><var id="username" value="no_authentication"></var></Variables><Properties></Properties><VarProperties></VarProperties></Header><Body><Payload Role="T" Type="Call" add=""></Payload><Payload Role="S"><BOM xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns="">
+	<TargetDB>SBODemoMx</TargetDB>
+	<TopSQL>20</TopSQL>
+	<TableName>OINV</TableName>
+	<BO>
+		<Documents>
+			<row>
+				<DocDueDate>20120426</DocDueDate>
+				<CardCode>C20000</CardCode>
+				<TaxDate>20120426</TaxDate>
+			</row>
+		</Documents>
+		<Document_Lines>
+			<row>
+				<ItemCode>A00001</ItemCode>
+				<Quantity>10.000000</Quantity>
+				<UnitPrice>200</UnitPrice>
+			</row>
+			<row>
+				<ItemCode>A00002</ItemCode>
+				<Quantity>20.000000</Quantity>
+				<UnitPrice>2000</UnitPrice>
+			</row>
+			<row>
+				<ItemCode>A00003</ItemCode>
+				<Quantity>3.000000</Quantity>
+				<UnitPrice>20.20</UnitPrice>
+			</row>
+		</Document_Lines>
+	</BO>
+</BOM></Payload></Body></Msg>
